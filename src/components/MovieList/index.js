@@ -4,7 +4,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import "./style.css";
 
-export default function MovieList() {
+export default function MovieList({title,link,api}) {
   const [movies, setMovies] = useState({
     data: [],
     metadata: {},
@@ -17,7 +17,7 @@ export default function MovieList() {
   useEffect(function () {
     setLoading(true);
     axios
-      .get("https://moviesapi.codingfront.dev/api/v1/movies")
+      .get("https://moviesapi.codingfront.dev/api/v1/movies?page=1")
       .then(function (response) {
         setMovies(response.data);
         setLoading(false);
@@ -29,10 +29,12 @@ export default function MovieList() {
   }, []);
 
   function renderMovies() {
-    return movies.data.map(function ({ title, poster }, index) {
+    return movies.data.map(function ({ title, poster ,id }, index) {
       return (
         <li key={index} className="movie-list">
+          <Link to={`/movie/${id}`} >
           <img src={poster} />
+        </Link>
         </li>
       );
     });
@@ -43,8 +45,8 @@ export default function MovieList() {
       <div className="movie-list">
         <div className="container">
           <div className="header-section">
-            <Link to="/">
-              <h2>ویژه</h2>
+            <Link to={link}>
+              <h2>{title}</h2>
             </Link>
           </div>
           <div className="movie-items">

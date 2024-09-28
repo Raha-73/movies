@@ -5,7 +5,7 @@ export default function Layout({children}) {
     return(
         <Fragment>
         <div className="layout-bg">
-            this data comes from layout
+            HEADER
         </div>
         <div>
             {children}

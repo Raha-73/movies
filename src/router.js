@@ -1,6 +1,6 @@
 import HomePage from "./pages/homePage.js";
 import Search from "./pages/search.js";
-import Movie from "./pages/movie.js";
+import SingleMovie from "./pages/SingleMovie";
 import NotFound from "./pages/notFound.js";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -16,7 +16,7 @@ const routes = createBrowserRouter([
   },
   {
     path: "movie/:id",
-    element: <Movie />,
+    element: <SingleMovie />,
   },
   {
     path: "*",
