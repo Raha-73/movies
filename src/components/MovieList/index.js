@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import "./style.css";
+import { Pagination } from "antd";
 
 export default function MovieList({title,link,api}) {
   const [movies, setMovies] = useState({
@@ -14,6 +15,7 @@ export default function MovieList({title,link,api}) {
   useEffect(function () {
     document.title = "homepage";
   }, []);
+  
   useEffect(function () {
     setLoading(true);
     axios
@@ -40,6 +42,20 @@ export default function MovieList({title,link,api}) {
     });
   }
 
+  function changePage(current,pageSize){
+    setLoading(true);
+    axios
+      .get(`https://moviesapi.codingfront.dev/api/v1/movies?page=${current}`)
+      .then(function (response) {
+        setMovies(response.data);
+        setLoading(false);
+      })
+      .catch(function (error) {
+        console.log(error);
+        setLoading(false);
+      });
+  }
+
   return (
     <Fragment>
       <div className="movie-list">
@@ -55,6 +71,15 @@ export default function MovieList({title,link,api}) {
                 ? "فیلم ها در حال بارگزاری هستند ..."
                 : renderMovies()}
             </ul>
+          </div>
+          <div style={{padding: '20px'}}>
+            <Pagination 
+            current={movies.metadata.current_page} 
+            total={movies.metadata.total_count} 
+            showSizeChanger={false}
+            onChange={changePage}
+            align="center"
+            />
           </div>
         </div>
       </div>

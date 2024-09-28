@@ -1,5 +1,5 @@
 import HomePage from "./pages/homePage.js";
-import Search from "./pages/search.js";
+import Search from "./pages/Search";
 import SingleMovie from "./pages/SingleMovie";
 import NotFound from "./pages/notFound.js";
 

@@ -11,7 +11,7 @@ export default function HomePage() {
     <div>
       <Layout>
         <div>salam az HomePage</div>
-        <MovieList title="ویژه" link="/" api=""/>
+        <MovieList title="Special Movies:" link="/" api=""/>
       </Layout>
     </div>
   );
