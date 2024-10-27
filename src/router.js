@@ -1,7 +1,6 @@
-import HomePage from "./pages/homePage.js";
-import Search from "./pages/Search";
+import HomePage from "./pages/HomePage/index.js";
 import SingleMovie from "./pages/SingleMovie";
-import NotFound from "./pages/notFound.js";
+import NotFound from "./pages/NotFound/index.js";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -11,14 +10,10 @@ const routes = createBrowserRouter([
     element: <HomePage />,
   },
   {
-    path: "search",
-    element: <Search />,
-  },
-  {
     path: "movie/:id",
     element: <SingleMovie />,
   },
-  {
+  { 
     path: "*",
     element: <NotFound />,
   },
