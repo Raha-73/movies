@@ -12,6 +12,7 @@ export default function HomePage() {
       <Layout>
         <div>HomePage</div>
         <MovieList title="Special Movies:" link="/" api=""/>
+        <Link to="/privacypolicy">privacypolicy</Link>
       </Layout>
     </div>
   );

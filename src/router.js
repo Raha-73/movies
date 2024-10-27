@@ -3,6 +3,7 @@ import SingleMovie from "./pages/SingleMovie";
 import NotFound from "./pages/NotFound/index.js";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import PrivacyPolicy from "./pages/PrivacyPolicy/index.js";
 
 const routes = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const routes = createBrowserRouter([
   { 
     path: "*",
     element: <NotFound />,
+  },
+  { 
+    path: "privacypolicy",
+    element: <PrivacyPolicy />,
   },
 ]);
 
