@@ -82,6 +82,7 @@ ul {
 }
 .flex {
     display: flex;
+    flex-wrap: wrap;
 }
 .justify-between {
     justify-content: space-between;
@@ -92,14 +93,10 @@ ul {
 .flex-column {
     flex-direction: column;
 }
-.align-center {
+.items-center {
     align-items: center;
 }
 .flex-wrap {
-    flex-wrap: wrap;
-}
-.flex {
-    display: flex;
     flex-wrap: wrap;
 }
 .text-center {

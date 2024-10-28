@@ -1,12 +1,10 @@
 import { Fragment } from "react";
-// import './style.css'
+import  Header  from "../../components/header/index.js";
 
 export default function LayoutComp({children}) {
     return(
         <Fragment>
-        <div className="layout-bg">
-            HEADER
-        </div>
+       <Header/>
         <div>
             {children}
         </div>

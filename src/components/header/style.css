@@ -1,0 +1,38 @@
+.header {
+    height:80px ;
+    gap: 15px;
+  }
+  .header-links{
+
+  }
+  .header-links .header-link {
+    padding: 0 20px;
+    align-items: center;
+    height: 30px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    }
+    .input-search {
+    transition: all 5s;
+    }
+    .search {
+        padding: 10px;
+        background: none;
+        border-radius: 10px;
+        border: 2px solid transparent; 
+        transition: border-color 0.4s ease; 
+        color: #fff;
+        font-size: 16px;
+    }
+    input:focus {
+    outline:none ;
+    border: 2px solid #f9ab00;
+    }
+    .nickname {
+    color: #fff;
+    padding: 10px 24px;
+    border: 2px solid #f9ab00;
+    border-radius: 10px;
+    cursor: pointer;
+    }

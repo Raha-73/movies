@@ -1,14 +1,9 @@
-// import Title from "antd/es/skeleton/Title"
+import { Fragment } from "react";
 
-// export default function Cards() {
-//    const chapter = [
-//     {
-//         poster:""
-//         name:""
-//         Title:""
-//     }
-//    ]
-//     return(
-//       <div></div>  
-//     )
-// }
+export default function MovieCard() {
+    return(
+        <Fragment>
+            <div>this is a movie card</div>
+        </Fragment>
+    )
+}
