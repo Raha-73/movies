@@ -1,7 +1,7 @@
 import { Fragment } from "react";
-import './style.css'
+// import './style.css'
 
-export default function Layout({children}) {
+export default function LayoutComp({children}) {
     return(
         <Fragment>
         <div className="layout-bg">

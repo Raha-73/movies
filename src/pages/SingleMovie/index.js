@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import Layout from "../../components/layout";
+import LayoutComp from "../../components/LayoutComp";
 import { Fragment, useEffect, useState } from "react";
 import axios from "axios";
 import moment from "moment-jalaali";
@@ -58,7 +58,7 @@ export default function SingleMovie() {
 
   return (
     <Fragment>
-      <Layout>
+      <LayoutComp>
 
         {
           loading ? (<h2>Is Loading ...</h2>) : (
@@ -80,7 +80,7 @@ export default function SingleMovie() {
             </Fragment>
           )
         }
-      </Layout>
+      </LayoutComp>
     </Fragment>
   );
 }
