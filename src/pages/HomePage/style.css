@@ -1,0 +1,9 @@
+.movie {
+  width: 50%;
+  padding: 0 10px;
+}
+@media screen and (min-width: 867px) {
+  .movie {
+    width: 25%;
+  }
+}

@@ -1,9 +1,13 @@
 @font-face {
-	font-family: 'Source Sans Pro';
-	src: url('assets/fonts/SourceSansPro/SourceSansPro-Regular.eot');
-	src: local('☺'), url('assets/fonts/SourceSansPro/SourceSansPro-Regular.woff') format('woff'), url('assets/fonts/SourceSansPro/SourceSansPro-Regular.ttf') format('truetype'), url('assets/fonts/SourceSansPro/SourceSansPro-Regular.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
+  font-family: "Source Sans Pro";
+  src: url("assets/fonts/SourceSansPro/SourceSansPro-Regular.eot");
+  src: local("☺"),
+    url("assets/fonts/SourceSansPro/SourceSansPro-Regular.woff") format("woff"),
+    url("assets/fonts/SourceSansPro/SourceSansPro-Regular.ttf")
+      format("truetype"),
+    url("assets/fonts/SourceSansPro/SourceSansPro-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 body {
   margin: 0;
@@ -31,16 +35,16 @@ code {
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 body {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 400;
-    color: #c0c0c0;
-    padding: 0;
-    margin: 0;
-    background-color: #1a191f;
-    /* overflow: hidden; */
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  color: #c0c0c0;
+  padding: 0;
+  margin: 0;
+  background-color: #1a191f;
+  /* overflow: hidden; */
 }
 ::-moz-selection {
   color: #fff;
@@ -64,153 +68,162 @@ h6 {
   margin: 0;
 }
 a {
-    text-decoration: none;
-    text-transform: capitalize;
-    color: #fff;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #fff;
 }
 ol,
 ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 .container {
-    width: 100%;
-    max-width: 1116px;
-    margin-left: auto;
-    margin-right: auto;
+  width: 100%;
+  max-width: 1116px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .container-full {
-    width: 100%;
-    max-width: 1600px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-left: auto;
-    margin-right: auto;
+  width: 100%;
+  max-width: 1600px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 .flex {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 .justify-between {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 .justify-center {
-    justify-content: center;
+  justify-content: center;
 }
 .flex-column {
-    flex-direction: column;
+  flex-direction: column;
 }
 .items-center {
-    align-items: center;
+  align-items: center;
 }
 .flex-wrap {
-    flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .flex-nowrap {
-    flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 .button {
-    border: 2px solid #fff;
-    border-radius: 5px;
-    color: #fff;
-    padding: 16px 42px;
-    letter-spacing: 3px;
-    font-size: 15px;
-    text-transform: uppercase;
-    transition: all ease 0.25s;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  padding: 16px 42px;
+  letter-spacing: 3px;
+  font-size: 15px;
+  text-transform: uppercase;
+  transition: all ease 0.25s;
 }
 .button:hover {
-    background-color: #fff;
-    color: #000;
+  background-color: #fff;
+  color: #000;
 }
 .col-1 {
-    width: 8.33%;
+  width: 8.33%;
 }
 .col-2 {
-    width: 16.66%;
+  width: 16.66%;
 }
 .col-3 {
-    width: 25%;
+  width: 25%;
 }
 .col-4 {
-    width: 33.33%;
+  width: 33.33%;
 }
 .col-5 {
-    width: 41.66%;
+  width: 41.66%;
 }
 .col-6 {
-    width: 50%;
+  width: 50%;
 }
 .col-7 {
-    width: 58.33%;
+  width: 58.33%;
 }
 .col-8 {
-    width: 66.66%;
+  width: 66.66%;
 }
 .col-9 {
-    width: 75%;
+  width: 75%;
 }
 .col-10 {
-    width: 83.33%;
+  width: 83.33%;
 }
 .col-11 {
-    width: 91.66%;
+  width: 91.66%;
 }
 .col-12 {
-    width: 100%;
+  width: 100%;
 }
 .padding-section {
-    padding-top: 120px;
-    padding-bottom: 120px;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 [class*="col-"] {
-    padding-left: 15px;
-    padding-right: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .mt-30 {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 .mb-30 {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 .mt-60 {
-    margin-top: 60px;
+  margin-top: 60px;
 }
 .mb-60 {
-    margin-bottom: 60px;
+  margin-bottom: 60px;
 }
 .mb-80 {
-    margin-bottom: 80px;
+  margin-bottom: 80px;
 }
 .pl-20 {
-    padding-left: 20px;
+  padding-left: 20px;
 }
 .pr-20 {
-    padding-right: 20px;
+  padding-right: 20px;
 }
 .pl-30 {
-    padding-left: 30px;
+  padding-left: 30px;
 }
 .pr-30 {
-    padding-right: 30px;
+  padding-right: 30px;
 }
 .uppercase {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 .capitalize {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 .relative {
-    position: relative;
+  position: relative;
 }
 .hidden {
   display: none;
 }
 .w-full {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 867px) {
+  .container {
+    max-width: 827px;
+  }
+  .button {
+    padding: 12px 34px;
+  }
 }
