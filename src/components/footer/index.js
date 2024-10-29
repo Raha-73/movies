@@ -1,18 +1,35 @@
-import "./style.css"
+import { Link } from "react-router-dom";
+import "./style.css";
+import { Fragment } from "react";
+
 export default function Footer() {
-    return(
-        <div className="footer">
-            <ul className="footer-menu">
-                <li>
-                    <Link to="#">About Us</Link>
-                </li>
-                <li>
-                    <Link to="#">Contacts</Link>
-                </li>
-                <li>
-                    <Link to="#">Privacy policy</Link>
-                </li>
-            </ul>
-        </div>
-    )
+    function scrollToTop() {
+        window.scrollTo({
+            top : 0,
+            behavior : "smooth"
+        });
+    }
+    return (
+        <Fragment>
+            <div className="footer-wrapper container-full">
+                <div className="footer container flex justify-between items-center">
+                    <div className="left flex items-center">
+                        <img src="https://hotflix.volkovdesign.com/main/img/logo.svg" alt="Logo" />
+                        <div className="footer-copyright">
+                            <div>© HOTFLIX, 2019—2024</div>
+                            <div className="created-by">
+                                Create by <Link className="creator-link" to="#">raha saeidi</Link>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="footer-links items-center">
+                        <Link className="footer-link" to="#">About Us</Link>
+                        <Link className="footer-link" to="#">Contacts</Link>
+                        <Link className="footer-link" to="/privacypolicy">Privacy policy</Link>
+                        <div onClick={scrollToTop} className="scroll-top"></div>
+                    </div>
+                </div>
+            </div>   
+        </Fragment>
+    );
 }

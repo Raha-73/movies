@@ -1,12 +1,9 @@
 .header {
     height:80px ;
-    gap: 15px;
-  }
-  .header-links{
-
+    gap: 10px;
   }
   .header-links .header-link {
-    padding: 0 20px;
+    padding: 0 15px;
     align-items: center;
     height: 30px;
     font-size: 14px;
@@ -29,6 +26,9 @@
         color: #fff;
         font-size: 16px;
     }
+    .search::placeholder {
+      color: #fff;
+    }
     input:focus {
     outline:none ;
     border: 2px solid #f9ab00;
@@ -39,4 +39,5 @@
     border: 2px solid #f9ab00;
     border-radius: 10px;
     cursor: pointer;
+    text-transform: uppercase;
     }

@@ -15,12 +15,12 @@ const routes = createBrowserRouter([
     element: <SingleMovie />,
   },
   { 
-    path: "*",
-    element: <NotFound />,
-  },
-  { 
     path: "privacypolicy",
     element: <PrivacyPolicy />,
+  },
+  { 
+    path: "*",
+    element: <NotFound />,
   },
 ]);
 

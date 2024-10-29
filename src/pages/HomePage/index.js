@@ -14,7 +14,6 @@ export default function HomePage() {
           
           <MovieCard />
           <MovieList title="Special Movies:" link="/" api=""/>
-          <Link to="/privacypolicy">privacypolicy</Link>
         </div>
       </LayoutComp>
     </Fragment>

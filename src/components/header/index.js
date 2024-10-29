@@ -4,9 +4,9 @@ import { Fragment } from "react"
 export default function Header() {
     return(
         <Fragment>
-            <div className="header justify-between container flex items-center">
+            <div className="header justify-between container flex items-center flex-nowrap">
                 <div>
-                    <img src="./assets/images/logo.svg"/>
+                    <img src="https://hotflix.volkovdesign.com/main/img/logo.svg"/>
                 </div>
                 <div className="header-links">
                     <Link className="header-link" to="#">HOME</Link>
@@ -23,4 +23,4 @@ export default function Header() {
         </Fragment>
     )
 }
-// فردا کارت فیلن و بساز فوتر و بساز و هدر و تکمیل کن
+// فردا کارت فیلم و بساز فوتر و بساز و هدر و تکمیل کن

@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import  Header  from "../../components/header/index.js";
+import Footer from "../../components/Footer/index.js";
 
 export default function LayoutComp({children}) {
     return(
@@ -8,9 +9,7 @@ export default function LayoutComp({children}) {
         <div>
             {children}
         </div>
-        <div className="layout-bg">
-            FOOTER
-        </div>
+        <Footer/>
         </Fragment>
     )
 }
