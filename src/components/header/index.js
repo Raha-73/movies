@@ -13,6 +13,7 @@ export default function Header() {
                     <Link className="header-link" to="#">Catalog</Link>
                     <Link className="header-link" to="#">Pricing plan</Link>
                     <Link className="header-link" to="#">Pages</Link>
+                    <Link className="header-link other" to="#">...</Link>
                 </div>
                 <div className="input-search">
                     <input className="search" placeholder="  search..."/>
@@ -22,3 +23,4 @@ export default function Header() {
         </Fragment>
     )
 }
+// فردا کارت فیلن و بساز فوتر و بساز و هدر و تکمیل کن

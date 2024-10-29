@@ -13,8 +13,12 @@
     text-transform: uppercase;
     color: #fff;
     }
+    .other {
+      font-size: 50px;
+    }
     .input-search {
     transition: all 5s;
+    color: #fff;
     }
     .search {
         padding: 10px;
