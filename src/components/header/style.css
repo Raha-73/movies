@@ -1,43 +1,59 @@
 .header {
-    height:80px ;
-    gap: 10px;
-  }
-  .header-links .header-link {
-    padding: 0 15px;
-    align-items: center;
-    height: 30px;
-    font-size: 14px;
-    text-transform: uppercase;
-    color: #fff;
-    }
-    .other {
-      font-size: 50px;
-    }
-    .input-search {
-    transition: all 5s;
-    color: #fff;
-    }
-    .search {
-        padding: 10px;
-        background: none;
-        border-radius: 10px;
-        border: 2px solid transparent; 
-        transition: border-color 0.4s ease; 
-        color: #fff;
-        font-size: 16px;
-    }
-    .search::placeholder {
-      color: #fff;
-    }
-    input:focus {
-    outline:none ;
-    border: 2px solid #f9ab00;
-    }
-    .nickname {
-    color: #fff;
-    padding: 10px 24px;
-    border: 2px solid #f9ab00;
-    border-radius: 10px;
-    cursor: pointer;
-    text-transform: uppercase;
-    }
+  background-color: #1a191f;
+  height: 80px;
+  gap: 10px;
+  position: fixed;
+  /* padding-top: 80px; */
+  top: 0;
+  /* left: 9%; */
+  z-index: 100;
+}
+.header-wrapper {
+  border-bottom: 0.5px solid #252525;
+}
+.header-links .header-link {
+  padding: 0 15px;
+  height: 30px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  transition: all 0.5s;
+}
+.header-links .header-link:hover {
+  color: #f9ab00;
+}
+/* .other {
+  font-size: 50px;
+} */
+.input-search {
+  transition: all 5s;
+  color: #fff;
+}
+.search {
+  padding: 10px 10px;
+  background: #222028;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  transition: border-color 0.4s ease;
+  color: #fff;
+  font-size: 16px;
+}
+.search::placeholder {
+  color: #b9b9b9;
+}
+input:focus {
+  outline: none;
+  border: 2px solid #f9ab00;
+}
+.nickname {
+  color: #fff;
+  padding: 10px 24px;
+  border: 2px solid #f9ab00;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.5s;
+}
+.nickname:hover {
+  background-color: #1f1606;
+}

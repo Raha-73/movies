@@ -10,7 +10,7 @@ export default function HomePage() {
     <Fragment>
       <LayoutComp>
         <div className="container">
-          <div>NEW ITEMS OF THIS SEASON</div>
+          <div className="home">NEW ITEMS OF THIS SEASON</div>
           <div className="test-card container flex">
             <div className="movie">
               <MovieCard />

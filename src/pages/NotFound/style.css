@@ -55,7 +55,7 @@ button {
   border: 2px solid #f9ab00;
   margin-top: 10px;
 }
-@media screen and (min-width: 867px) {
+@media screen and (max-width: 867px) {
   button {
     margin-top: 50px;
   }
