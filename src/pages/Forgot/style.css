@@ -1,0 +1,62 @@
+.error-404 {
+  height: 100vh;
+  position: relative;
+}
+.background-img-404 {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://hotflix.volkovdesign.com/main/img/bg/section__bg.jpg");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.num-error {
+  position: relative;
+  color: #f9ab00;
+  line-height: 100%;
+  font-size: 120px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+.content {
+  border-radius: 8px;
+  background-color: #1a191f;
+  text-align: center;
+  color: white;
+  border: 1px solid #222028;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 60px;
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  text-shadow: none;
+}
+.text {
+  line-height: 30px;
+  font-weight: 400;
+}
+.text-2 {
+  margin-bottom: 10px;
+}
+button {
+  width: 100%;
+  height: 46px;
+  padding: 15px;
+  background-color: #1a191f;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #fff;
+  text-transform: uppercase;
+  border: 2px solid #f9ab00;
+  margin-top: 10px;
+}
+@media screen and (max-width: 867px) {
+  button {
+    margin-top: 50px;
+  }
+}

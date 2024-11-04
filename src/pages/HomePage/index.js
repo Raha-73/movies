@@ -9,8 +9,13 @@ export default function HomePage() {
   return (
     <Fragment>
       <LayoutComp>
-        <div className="container">
-          <div className="home">NEW ITEMS OF THIS SEASON</div>
+        <div className="home container uppercase">
+          <div className="home-scroll">
+            <h1 className="home-title">
+              <b className="bold-title">NEW ITEMS </b>
+              OF THIS SEASON
+            </h1>
+          </div>
           <div className="test-card container flex">
             <div className="movie">
               <MovieCard />

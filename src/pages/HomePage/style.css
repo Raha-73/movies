@@ -3,7 +3,17 @@
   padding: 0 10px;
 }
 .home {
-  margin-top: 30%;
+  margin-top: 15%;
+  margin-bottom: 10%;
+}
+.home-title {
+  font-size: 42px;
+  color: #ebebeb;
+  line-height: 42px;
+}
+.home-title .bold-title {
+  font-size: 42px;
+  color: #fff;
 }
 @media screen and (min-width: 867px) {
   .movie {

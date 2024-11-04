@@ -1,7 +1,7 @@
 import HomePage from "./pages/HomePage/index.js";
 import SingleMovie from "./pages/SingleMovie";
 import NotFound from "./pages/NotFound/index.js";
-
+import Forgot from "./pages/Forgot/index.js";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import PrivacyPolicy from "./pages/PrivacyPolicy/index.js";
 
@@ -14,11 +14,15 @@ const routes = createBrowserRouter([
     path: "movie/:id",
     element: <SingleMovie />,
   },
-  { 
+  {
     path: "privacypolicy",
     element: <PrivacyPolicy />,
   },
-  { 
+  {
+    path: "Forgot",
+    element: <Forgot />,
+  },
+  {
     path: "*",
     element: <NotFound />,
   },
