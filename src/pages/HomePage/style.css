@@ -4,16 +4,19 @@
 }
 .home {
   margin-top: 15%;
-  margin-bottom: 10%;
 }
 .home-title {
   font-size: 42px;
   color: #ebebeb;
   line-height: 42px;
+  margin-bottom: 40px;
 }
 .home-title .bold-title {
   font-size: 42px;
   color: #fff;
+}
+.test-card {
+  margin: 0 -10px;
 }
 @media screen and (min-width: 867px) {
   .movie {

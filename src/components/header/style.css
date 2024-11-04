@@ -22,12 +22,10 @@
 .header-links .header-link:hover {
   color: #f9ab00;
 }
-/* .other {
-  font-size: 50px;
-} */
 .input-search {
   transition: all 5s;
   color: #fff;
+  position: relative;
 }
 .search {
   padding: 10px 10px;
@@ -40,6 +38,42 @@
 }
 .search::placeholder {
   color: #b9b9b9;
+}
+.result-search {
+  width: 250px;
+  height: 300px;
+  background-color: #282827;
+  position: absolute;
+  top: 50px;
+  border-radius: 10px;
+  border: 2px solid #f9ab00;
+  overflow-y: scroll;
+}
+
+.result-search::-webkit-scrollbar {
+  width: 12px;
+}
+
+.result-search::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.result-search::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.result-search::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.search-list .search-item {
+  border-bottom: 1px solid #fff;
+  padding: 10px 15px;
+}
+.search-list .search-item:hover {
+  background-color: #363534;
+  cursor: pointer;
 }
 input:focus {
   outline: none;
