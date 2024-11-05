@@ -1,6 +1,7 @@
 .movie {
   width: 50%;
   padding: 0 10px;
+  margin: 10px 0;
 }
 .home {
   margin-top: 15%;
@@ -20,6 +21,6 @@
 }
 @media screen and (min-width: 867px) {
   .movie {
-    width: 25%;
+    width: 20%;
   }
 }

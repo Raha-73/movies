@@ -20,13 +20,21 @@ export default function Header() {
   );
 
   function renderList() {
-    return searchResult.data.map(function (item) {
+    if (searchResult.data.length < 1) {
       return (
-        <Link to={`/movie/${item.id}`}>
-          <li className="search-item">{item.title}</li>
-        </Link>
+        <Fragment>
+          <div className="search-item">no result found</div>
+        </Fragment>
       );
-    });
+    } else {
+      return searchResult.data.map(function (item) {
+        return (
+          <Link to={`/movie/${item.id}`}>
+            <li className="search-item">{item.title}</li>
+          </Link>
+        );
+      });
+    }
   }
   function inputChange(event) {
     const value = event.target.value;

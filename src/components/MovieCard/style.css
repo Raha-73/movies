@@ -1,0 +1,66 @@
+.card {
+  vertical-align: bottom;
+  position: relative;
+}
+.card .img-wrapper {
+  height: 100%;
+  position: relative;
+  transition: all 0.5s;
+}
+.card .card-image {
+  border-radius: 10px;
+  height: 302px;
+  object-fit: cover;
+}
+.card .img-wrapper .cover {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  z-index: 10;
+  position: absolute;
+  inset: 0;
+  visibility: hidden;
+}
+.card .img-wrapper:hover .cover {
+  visibility: visible;
+}
+.card .card-image:hover {
+  background-color: black;
+  transition: opacity 0.4s;
+}
+.card .rate {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(26, 25, 31, 0.6);
+  border: 2px solid #29b474;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+}
+.card .title {
+  height: 30px;
+  margin-top: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 30px;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 400;
+  cursor: pointer;
+  transition: 0.5s;
+  text-transform: capitalize;
+}
+.card .title:hover {
+  color: #f9ab00;
+}
+.card .genre {
+  color: #f9ab00;
+  cursor: pointer;
+  text-transform: capitalize;
+  padding-top: 5px;
+}
+.card .genre:hover {
+  text-decoration: underline;
+}
