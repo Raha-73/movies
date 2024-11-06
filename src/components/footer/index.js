@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./style.css";
 import { Fragment } from "react";
-
+import { IconArrowUp } from "@tabler/icons-react";
 export default function Footer() {
   function scrollToTop() {
     window.scrollTo({
@@ -37,7 +37,12 @@ export default function Footer() {
             <Link className="footer-link" to="/privacypolicy">
               Privacy policy
             </Link>
-            <div onClick={scrollToTop} className="scroll-top"></div>
+            <div
+              onClick={scrollToTop}
+              className="scroll-top flex items-center justify-between "
+            >
+              <IconArrowUp stroke={2} />
+            </div>
           </div>
         </div>
       </div>

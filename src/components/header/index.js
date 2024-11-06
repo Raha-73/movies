@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "./style.css";
 import { Fragment, useState, useEffect } from "react";
 import axios from "axios";
+import { IconSearch } from "@tabler/icons-react";
 
 export default function Header() {
   const [search, setSearch] = useState("");
@@ -58,16 +59,16 @@ export default function Header() {
             <Link className="header-link" to="/">
               HOME
             </Link>
-            <Link className="header-link" to="/catalog">
+            <Link className="header-link" to="#">
               Catalog
             </Link>
-            <Link className="header-link" to="/pricing">
+            <Link className="header-link" to="#">
               Pricing plan
             </Link>
-            <Link className="header-link" to="/pages">
+            <Link className="header-link" to="#">
               Pages
             </Link>
-            <Link className="header-link other" to="/more">
+            <Link className="header-link other" to="#">
               ...
             </Link>
           </div>
@@ -79,7 +80,10 @@ export default function Header() {
               className="search"
               placeholder="Search..."
               value={search}
-            />
+            ></input>{" "}
+            <a href="#" className="search-icon">
+              <IconSearch className="icon" stroke={2} />
+            </a>
             {searchResultVisibility && (
               <div className="result-search">
                 <ul className="search-list">{renderList()}</ul>

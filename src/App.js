@@ -1,15 +1,11 @@
-import './App.css';
+import "./App.css";
 
-import { Fragment } from 'react';
-import Router from './router.js'
-
+import { Fragment } from "react";
+import Router from "./router.js";
 
 function App() {
-  
   return (
-
     <Fragment>
-
       <Router />
       {/* <Menu></Menu> */}
     </Fragment>

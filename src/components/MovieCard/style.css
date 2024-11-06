@@ -2,32 +2,78 @@
   vertical-align: bottom;
   position: relative;
 }
+
 .card .img-wrapper {
   height: 100%;
   position: relative;
-  transition: all 0.5s;
 }
+
 .card .card-image {
-  border-radius: 10px;
+  border-radius: 8px;
   height: 302px;
   object-fit: cover;
+  transition: opacity 0.4s ease;
 }
+
 .card .img-wrapper .cover {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
+  border-radius: 8px;
   z-index: 10;
   position: absolute;
   inset: 0;
-  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
+
 .card .img-wrapper:hover .cover {
-  visibility: visible;
+  opacity: 1;
 }
+.card .img-wrapper .player-holder {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 90;
+  transform: translate(-50%, -50%);
+  background-color: rgba(183, 183, 183, 0.299);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.card .img-wrapper:hover .player-holder {
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+.card .img-wrapper .player-holder:hover {
+  background-color: #f9aa00c5;
+}
+.card .img-wrapper .player {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f9ab00;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  border: 7px solid #ffffff90;
+  z-index: 100;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.card .img-wrapper:hover .player {
+  opacity: 1;
+}
+
 .card .card-image:hover {
-  background-color: black;
-  transition: opacity 0.4s;
+  opacity: 0.7;
 }
+
 .card .rate {
   width: 36px;
   height: 36px;
@@ -38,6 +84,7 @@
   top: 20px;
   left: 10px;
 }
+
 .card .title {
   height: 30px;
   margin-top: 10px;
@@ -49,18 +96,21 @@
   color: #fff;
   font-weight: 400;
   cursor: pointer;
-  transition: 0.5s;
+  transition: color 0.5s ease;
   text-transform: capitalize;
 }
+
 .card .title:hover {
   color: #f9ab00;
 }
+
 .card .genre {
   color: #f9ab00;
   cursor: pointer;
   text-transform: capitalize;
   padding-top: 5px;
 }
+
 .card .genre:hover {
   text-decoration: underline;
 }
