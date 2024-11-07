@@ -33,19 +33,22 @@ export default function SingleMovie() {
 
   const [loading, setLoading] = useState(false);
 
-  useEffect(function () {
-    setLoading(true);
-    axios
-      .get(`https://moviesapi.codingfront.dev/api/v1/movies/${id}`)
-      .then(function (response) {
-        setMovie(response.data);
-        setLoading(false);
-      })
-      .catch(function (error) {
-        console.log(error);
-        setLoading(false);
-      });
-  }, []);
+  useEffect(
+    function () {
+      setLoading(true);
+      axios
+        .get(`https://moviesapi.codingfront.dev/api/v1/movies/${id}`)
+        .then(function (response) {
+          setMovie(response.data);
+          setLoading(false);
+        })
+        .catch(function (error) {
+          console.log(error);
+          setLoading(false);
+        });
+    },
+    [id]
+  );
 
   useEffect(
     function () {
