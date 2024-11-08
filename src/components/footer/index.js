@@ -28,10 +28,10 @@ export default function Footer() {
             </div>
           </div>
           <div className="footer-links items-center">
-            <Link className="footer-link" to="#">
+            <Link className="footer-link" to="/aboutUs">
               About Us
             </Link>
-            <Link className="footer-link" to="#">
+            <Link className="footer-link" to="/contacts">
               Contacts
             </Link>
             <Link className="footer-link" to="/privacypolicy">

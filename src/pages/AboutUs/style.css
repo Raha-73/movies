@@ -1,0 +1,59 @@
+.section-text {
+  margin-top: 15px;
+}
+.section-text .bold {
+  color: #fff;
+}
+.feture-icon {
+  color: #f9ab00;
+}
+.tabler-icon {
+  width: 42px;
+  height: 42px;
+}
+/* .size {
+} */
+.feture-card {
+  margin-top: 30px;
+  /* vertical-align: auto; */
+  display: flex; /* برای قرار دادن آیکن و تایتل در یک خط */
+  align-items: flex-start; /* تراز کردن محتوا از سمت چپ */
+}
+.koft {
+  flex-direction: column;
+}
+.feture-card .title {
+  display: flex; /* برای قرار دادن آیکن و تایتل در یک خط */
+  align-items: center; /* تراز کردن آیکن و تایتل به صورت عمودی */
+  gap: 10px; /* فاصله بین آیکن و تایتل */
+}
+
+.feture-icon {
+  color: #f9ab00; /* رنگ آیکن */
+  width: 42px; /* اندازه آیکن */
+  height: 42px; /* اندازه آیکن */
+}
+
+.text {
+  margin-top: 5px; /* فاصله دادن بین تایتل+آیکن و متن */
+}
+
+/* .feture .feture-card {
+  width: 33.33;
+  height: 200px;
+  gap: 5px;
+} */
+/* .asas {
+  width: 27%;
+} */
+/* @media (max-width: 768px) {
+  .feature-row {
+    grid-template-columns: 1fr 1fr; 
+  }
+}
+
+@media (max-width: 480px) {
+  .feature-row {
+    grid-template-columns: 1fr;
+  }
+} */
