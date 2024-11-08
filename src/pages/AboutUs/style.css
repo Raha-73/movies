@@ -7,20 +7,9 @@
 .feture {
   margin-bottom: 0px;
 }
-.feture-icon {
-  color: #f9ab00;
-}
-.tabler-icon {
-  width: 42px;
-  height: 42px;
-}
 .feture-card {
   margin-top: 30px;
-  position: relative;
   display: flex;
-  align-items: flex-start;
-  width: 350px;
-  height: 200px;
 }
 .feture-card .title {
   display: flex;
@@ -28,14 +17,6 @@
   gap: 10px;
 }
 
-.feture-icon {
-  position: absolute;
-  top: 0;
-  left: -35px;
-  color: #f9ab00;
-  width: 42px;
-  height: 42px;
-}
 .how-title {
   margin-bottom: 30px;
 }
@@ -57,7 +38,6 @@
 
 .how-works {
   padding-top: 80px;
-  border-top: 1px solid #5c5c5c56;
 }
 /* @media (max-width: 768px) {
   .feature-row {

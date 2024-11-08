@@ -9,7 +9,54 @@ import { IconTicket } from "@tabler/icons-react";
 import { IconCast } from "@tabler/icons-react";
 import { IconLanguage } from "@tabler/icons-react";
 import Hero from "../../components/Hero";
+import MovieFeature from "../../components/MovieFeature";
 export default function AboutUs() {
+  const featureData = [
+    {
+      title: "Ultra HD",
+      text: "Experience movies like never before with our Ultra HD feature. Immerse yourself in stunning visuals, vibrant colors, and crystal-clear detail.",
+      icon: "IconBadgeHd",
+    },
+    {
+      title: "Large movie database",
+      text: "Discover a vast and diverse collection of movies in our extensive database. With thousands of titles to choose from, you'll never run out of options.",
+      icon: "IconMovie",
+    },
+    {
+      title: "Online TV",
+      text: "Expand your entertainment horizons with our Online TV. Stream live TV channels, catch up on your favorite shows, and enjoy a wide range of television content online.",
+      icon: "IconMovie",
+    },
+    {
+      title: "Early access to new items",
+      text: "Be the first to experience the latest movies and exclusive content with our Early Access feature. Get a sneak peek into upcoming releases, gain access to special screenings, and stay ahead of the curve.",
+      icon: "IconMovie",
+    },
+    {
+      title: "Airplay",
+      text: "Seamlessly stream movies from your device to the big screen with Airplay integration. Experience the cinematic magic in the comfort of your living room and share the excitement with friends and family.",
+      icon: "IconMovie",
+    },
+    {
+      title: "Multi language subtitles",
+      text: "Break language barriers and enjoy movies from around the world with our multi-language subtitles. Explore different cultures, expand your cinematic horizons, and appreciate the beauty of global cinema.",
+      icon: "IconMovie",
+    },
+  ];
+  function renderFeatures() {
+    return featureData.map(function (feature) {
+      return (
+        <div className="feture-card flex items-center col-4">
+          <MovieFeature
+            title={feature.title}
+            text={feature.text}
+            icon={feature.icon}
+          />
+          <div></div>
+        </div>
+      );
+    });
+  }
   return (
     <Fragment>
       <LayoutComp>
@@ -32,76 +79,11 @@ export default function AboutUs() {
             realms of imagination and emotion.
           </p>
           <div className="feture flex items-center justify-between">
-            <div className="feture-card flex items-center col-4">
-              <div className="feture-icon">
-                <IconBadgeHd stroke={2} />
-              </div>
-              <h3 className="title">Ultra HD</h3>
-              <p className="text">
-                Experience movies like never before with our Ultra HD feature.
-                Immerse yourself in stunning visuals, vibrant colors, and
-                crystal-clear detail.
-              </p>
+            <div className="flex items-center justify-between">
+              {renderFeatures()}
             </div>
-            <div className="feture-card flex items-center col-4">
-              <div className="feture-icon">
-                <IconMovie stroke={2} />
-              </div>
-              <h3 className="title">Large movie database</h3>
-              <p className="text">
-                Discover a vast and diverse collection of movies in our
-                extensive database. With thousands of titles to choose from,
-                you'll never run out of options.
-              </p>
-            </div>
-            <div className="feture-card flex items-center col-4">
-              <div className="feture-icon">
-                <IconDeviceTv stroke={2} />
-              </div>
-              <h3 className="title">Online TV</h3>
-              <p className="text">
-                Expand your entertainment horizons with our Online TV. Stream
-                live TV channels, catch up on your favorite shows, and enjoy a
-                wide range of television content online.
-              </p>
-            </div>
-            <div className="feture-card flex items-center col-4">
-              <div className="feture-icon">
-                <IconTicket stroke={2} />
-              </div>
-              <h3 className="title">Early access to new items</h3>
-              <p className="text">
-                Be the first to experience the latest movies and exclusive
-                content with our Early Access feature. Get a sneak peek into
-                upcoming releases, gain access to special screenings, and stay
-                ahead of the curve.
-              </p>
-            </div>
-            <div className="feture-card flex items-center col-4">
-              <div className="feture-icon">
-                <IconCast stroke={2} />
-              </div>
-              <h3 className="title">Airplay</h3>
-              <p className="text">
-                Seamlessly stream movies from your device to the big screen with
-                Airplay integration. Experience the cinematic magic in the
-                comfort of your living room and share the excitement with
-                friends and family.
-              </p>
-            </div>
-            <div className="feture-card flex items-center col-4">
-              <div className="feture-icon">
-                <IconLanguage stroke={2} />
-              </div>
-              <h3 className="title">Multi language subtitles</h3>
-              <p className="text">
-                Break language barriers and enjoy movies from around the world
-                with our multi-language subtitles. Explore different cultures,
-                expand your cinematic horizons, and appreciate the beauty of
-                global cinema.
-              </p>
-            </div>
-            <div className="how-works">
+
+            {/* <div className="how-works">
               <h1 className="how-title">How it works?</h1>
               <div className="kkk flex flex-nowrap  items-center ">
                 <div className="work-part  items-center col-4">
@@ -132,7 +114,7 @@ export default function AboutUs() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </LayoutComp>
