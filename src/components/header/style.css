@@ -40,6 +40,10 @@
 .search-icon {
   position: relative;
 }
+.search-icon svg {
+  width: 25px;
+  height: 25px;
+}
 a .icon {
   position: absolute;
   right: 10px;

@@ -2,15 +2,13 @@ import { Fragment } from "react";
 import { Link } from "react-router-dom";
 import LayoutComp from "../../components/LayoutComp";
 import "./style.css";
+import Hero from "../../components/Hero";
 export default function PrivacyPolicy() {
   return (
     <Fragment>
       <LayoutComp>
+        <Hero heading={"Privacy Policy"} />
         <div className="container">
-          <div className="first-section flex items-center justify-between">
-            <h1 className="title">Privacy policy</h1>
-            <Link to="/">HOME</Link>
-          </div>
           <div className="section w-full container-full">
             <p>
               It is a long established fact that a reader will be distracted by

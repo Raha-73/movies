@@ -8,15 +8,13 @@ import { IconMovie } from "@tabler/icons-react";
 import { IconTicket } from "@tabler/icons-react";
 import { IconCast } from "@tabler/icons-react";
 import { IconLanguage } from "@tabler/icons-react";
+import Hero from "../../components/Hero";
 export default function AboutUs() {
   return (
     <Fragment>
       <LayoutComp>
-        <div className="container flex">
-          <div className="first-section flex ">
-            <h1 className="title">AboutUs</h1>
-            <Link to="/">HOME</Link>
-          </div>
+        <Hero heading={"About Us"} />
+        <div className="container">
           <h1 className="section-title">
             <b>HotFlix</b> – Best Place for Movies
           </h1>
@@ -33,7 +31,7 @@ export default function AboutUs() {
             the world of cinematic magic and let yourself be transported to new
             realms of imagination and emotion.
           </p>
-          <div className="feture kjkjkj flex items-center justify-between">
+          <div className="feture flex items-center justify-between">
             <div className="feture-card flex items-center col-4">
               <div className="feture-icon">
                 <IconBadgeHd stroke={2} />
@@ -102,6 +100,38 @@ export default function AboutUs() {
                 expand your cinematic horizons, and appreciate the beauty of
                 global cinema.
               </p>
+            </div>
+            <div className="how-works">
+              <h1 className="how-title">How it works?</h1>
+              <div className="kkk flex flex-nowrap  items-center ">
+                <div className="work-part  items-center col-4">
+                  <h1 className="part-number">01</h1>
+                  <h3 className="part-title">Create an account</h3>
+                  <div className="part-text">
+                    Start your movie-watching journey by creating a personalized
+                    account on our platform. Sign up easily and gain access to a
+                    world of entertainment.
+                  </div>
+                </div>
+                <div className="work-part  items-center col-4">
+                  <h1 className="part-number">02</h1>
+                  <h3 className="part-title">Choose your plan</h3>
+                  <div className="part-text">
+                    Select the perfect plan that suits your preferences and
+                    watching habits. We offer a range of subs options from basic
+                    plans to premium plans.
+                  </div>
+                </div>
+                <div className="work-part  items-center col-4">
+                  <h1 className="part-number">03</h1>
+                  <h3 className="part-title">Enjoy HotFlix</h3>
+                  <div className="part-text">
+                    Immerse yourself in the world of HotFlix, where unlimited
+                    movie streaming awaits. With our vast collection of movies
+                    there's something for everyone.
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
