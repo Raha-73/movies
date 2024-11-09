@@ -8,6 +8,7 @@ import { IconMovie } from "@tabler/icons-react";
 import { IconTicket } from "@tabler/icons-react";
 import { IconCast } from "@tabler/icons-react";
 import { IconLanguage } from "@tabler/icons-react";
+import How from "../../components/How";
 import Hero from "../../components/Hero";
 import MovieFeature from "../../components/MovieFeature";
 export default function AboutUs() {
@@ -43,6 +44,28 @@ export default function AboutUs() {
       icon: "IconMovie",
     },
   ];
+
+  const howData = [
+    {
+      number: "01",
+      howtitle: "Create an account",
+      howtext:
+        "Start your movie-watching journey by creating a personalized account on our platform. Sign up easily and gain access to a world of entertainment",
+    },
+    {
+      number: "02",
+      howtitle: "Choose your plan",
+      howtext:
+        "Select the perfect plan that suits your preferences and watching habits. We offer a range of subs options from basic plans to premium plans.",
+    },
+    {
+      number: "03",
+      howtitle: "Enjoy HotFlix",
+      howtext:
+        "Immerse yourself in the world of HotFlix, where unlimited movie streaming awaits. With our vast collection of movies there's something for everyone.",
+    },
+  ];
+
   function renderFeatures() {
     return featureData.map(function (feature) {
       return (
@@ -51,6 +74,21 @@ export default function AboutUs() {
             title={feature.title}
             text={feature.text}
             icon={feature.icon}
+          />
+          <div></div>
+        </div>
+      );
+    });
+  }
+
+  function renderHowPart() {
+    return howData.map(function (item, index) {
+      return (
+        <div className="work-part items-center col-4">
+          <How
+            number={item.number}
+            howtitle={item.howtitle}
+            howtext={item.howtext}
           />
           <div></div>
         </div>
@@ -83,38 +121,12 @@ export default function AboutUs() {
               {renderFeatures()}
             </div>
 
-            {/* <div className="how-works">
+            <div className="how-works flex items-center justify-between">
               <h1 className="how-title">How it works?</h1>
-              <div className="kkk flex flex-nowrap  items-center ">
-                <div className="work-part  items-center col-4">
-                  <h1 className="part-number">01</h1>
-                  <h3 className="part-title">Create an account</h3>
-                  <div className="part-text">
-                    Start your movie-watching journey by creating a personalized
-                    account on our platform. Sign up easily and gain access to a
-                    world of entertainment.
-                  </div>
-                </div>
-                <div className="work-part  items-center col-4">
-                  <h1 className="part-number">02</h1>
-                  <h3 className="part-title">Choose your plan</h3>
-                  <div className="part-text">
-                    Select the perfect plan that suits your preferences and
-                    watching habits. We offer a range of subs options from basic
-                    plans to premium plans.
-                  </div>
-                </div>
-                <div className="work-part  items-center col-4">
-                  <h1 className="part-number">03</h1>
-                  <h3 className="part-title">Enjoy HotFlix</h3>
-                  <div className="part-text">
-                    Immerse yourself in the world of HotFlix, where unlimited
-                    movie streaming awaits. With our vast collection of movies
-                    there's something for everyone.
-                  </div>
-                </div>
+              <div className="flex flex-nowrap items-center ">
+                {renderHowPart()}
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </LayoutComp>

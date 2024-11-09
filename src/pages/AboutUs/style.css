@@ -20,12 +20,7 @@
 .how-title {
   margin-bottom: 30px;
 }
-.work-part {
-  width: 380px;
-  height: 294px;
-  background-color: #222028;
-  gap: 10px;
-}
+
 .part-number {
   font-size: 46px;
   line-height: 100%;
@@ -35,7 +30,6 @@
   color: #f9ab00;
   width: 100%;
 }
-
 .how-works {
   padding-top: 80px;
 }

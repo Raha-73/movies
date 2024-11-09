@@ -1,0 +1,41 @@
+.holder-how {
+  /* width: 380px;
+  height: 294px; */
+  background-color: #222028;
+  gap: 10px;
+}
+.how-number {
+  font-size: 46px;
+  line-height: 100%;
+  font-weight: 600;
+  margin-bottom: 15px;
+  display: block;
+  color: #f9ab00;
+  width: 100%;
+}
+.how-title {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #fff;
+}
+.how-text {
+  color: #c0c0c0;
+  font-size: 16px;
+  line-height: 26px;
+}
+/* .content {
+    border-radius: 8px;
+    background-color: #1a191f;
+    text-align: center;
+    color: white;
+    border: 1px solid #222028;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 60px;
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    text-shadow: none;
+  } */

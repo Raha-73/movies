@@ -171,6 +171,9 @@ ul {
   padding-top: 120px;
   padding-bottom: 120px;
 }
+.pb-160 {
+  padding-bottom: 160px;
+}
 [class*="col-"] {
   padding-left: 15px;
   padding-right: 15px;
