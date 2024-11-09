@@ -8,7 +8,7 @@ export default function Contacts() {
     <Fragment>
       <LayoutComp>
         <Hero heading={"Contacts"} />
-        <div className="container pb-160">
+        <div className="container">
           <div className="flex items-center">
             <div className="contact-form col-8">
               <h1 className="contact-heading">Contact Form</h1>
