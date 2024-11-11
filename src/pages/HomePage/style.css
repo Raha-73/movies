@@ -38,6 +38,12 @@
 .mySwiper {
   user-select: none;
 }
+.premiere {
+  border-top: 1px solid #222028;
+  border-bottom: 1px solid #222028;
+  padding: 50px 0;
+  margin: 90px 0;
+}
 @media screen and (min-width: 867px) {
   .movie {
     width: 20%;

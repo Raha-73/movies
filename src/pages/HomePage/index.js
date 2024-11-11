@@ -28,8 +28,8 @@ export default function HomePage() {
         console.log("error404");
       });
   }, []);
-  function renderList() {
-    return newMovies.data.map(function (movie, index) {
+  function renderList(list) {
+    return list.map(function (movie, index) {
       return (
         <Fragment>
           <SwiperSlide>
@@ -234,17 +234,16 @@ export default function HomePage() {
   return (
     <Fragment>
       <LayoutComp>
-        <div className="home container">
+        <section className="home container">
           <div className="home-scroll">
             <h1 className="home-title">
               <b className="bold-title">NEW ITEMS </b>
               OF THIS SEASON
             </h1>
+            <Swiper slidesPerView={4.8} spaceBetween={30} className="mySwiper">
+              {renderList(newMovies.data)}
+            </Swiper>
           </div>
-          {/* <div className="test-card container flex">{renderList()}</div> */}
-          <Swiper slidesPerView={4.8} spaceBetween={30} className="mySwiper">
-            {renderList()}
-          </Swiper>
           <section className="recently-movie ">
             <h1 className="home-title">Recently updated</h1>
             <ConfigProvider theme={theme}>
@@ -256,9 +255,27 @@ export default function HomePage() {
               />
             </ConfigProvider>
           </section>
-          <h1 className="plan-heading">Select your plan</h1>
-          <div className="plan-section flex">{renderPlan()}</div>
-        </div>
+        </section>
+        <section className="premiere">
+          <div className="container">
+            <div className="home-scroll">
+              <h1 className="home-title">Expected premiere</h1>
+              <Swiper
+                slidesPerView={6.2}
+                spaceBetween={30}
+                className="mySwiper"
+              >
+                {renderList(newMovies.data)}
+              </Swiper>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div className="container">
+            <h1 className="plan-heading">Select your plan</h1>
+            <div className="plan-section flex">{renderPlan()}</div>
+          </div>
+        </section>
       </LayoutComp>
     </Fragment>
   );
