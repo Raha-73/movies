@@ -46,7 +46,7 @@ export default function HomePage() {
   }
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [activeTab, setActiveTab] = useState("1");
+  const [activeTab, setActiveTab] = useState("2");
 
   useEffect(function () {
     fetchMovies(activeTab);
@@ -195,25 +195,25 @@ export default function HomePage() {
 
   const items = [
     {
-      key: "1",
+      key: "2",
       label: "New items",
       children: <div className="flex">{renderRecentlyMovies()}</div>,
       tabStyle: { color: "#fff" },
     },
     {
-      key: "2",
+      key: "3",
       label: "Movies",
       children: <div className="flex">{renderRecentlyMovies()}</div>,
       tabStyle: { color: "#fff" },
     },
     {
-      key: "3",
+      key: "4",
       label: "TV Shows",
       children: <div className="flex">{renderRecentlyMovies()}</div>,
       tabStyle: { color: "#fff" },
     },
     {
-      key: "4",
+      key: "5",
       label: "Anime",
       children: <div className="flex">{renderRecentlyMovies()}</div>,
       tabStyle: { color: "#fff" },

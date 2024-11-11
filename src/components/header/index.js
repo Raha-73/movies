@@ -3,6 +3,8 @@ import "./style.css";
 import { Fragment, useState, useEffect } from "react";
 import axios from "axios";
 import { IconSearch } from "@tabler/icons-react";
+import { DownOutlined } from "@ant-design/icons";
+import { Dropdown, Space } from "antd";
 
 export default function Header() {
   const [search, setSearch] = useState("");
@@ -19,6 +21,21 @@ export default function Header() {
     },
     [search]
   );
+
+  const items = [
+    {
+      key: "1",
+      label: <Link to="/privacypolicy">Privacy policy</Link>,
+    },
+    {
+      key: "2",
+      label: <Link to="/Contacts">Contacts</Link>,
+    },
+    {
+      key: "3",
+      label: <Link to="/aboutUs">About Us</Link>,
+    },
+  ];
 
   function renderList() {
     if (searchResult.data.length < 1) {
@@ -55,7 +72,7 @@ export default function Header() {
               />
             </a>
           </div>
-          <div className="header-links">
+          <div className="header-links flex">
             <Link className="header-link" to="/">
               HOME
             </Link>
@@ -68,9 +85,15 @@ export default function Header() {
             <Link className="header-link" to="#">
               Pages
             </Link>
-            <Link className="header-link other" to="#">
-              ...
-            </Link>
+
+            <Dropdown
+              overlayStyle={{ backgroundColor: "#222028" }}
+              className="dropDown"
+              menu={{ items }}
+              trigger={["click"]}
+            >
+              <div style={{ backgroundColor: "#222028" }}>...</div>
+            </Dropdown>
           </div>
 
           <div className="input-search">

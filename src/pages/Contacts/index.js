@@ -18,7 +18,7 @@ export default function Contacts() {
           <div className="flex ">
             <div className="contact-form items-center col-8">
               <h1 className="contact-heading">Contact Form</h1>
-              <div className="contact-box w-full flex justify-center items-center">
+              <div className="contact-box-form w-full flex justify-center items-center">
                 <div className="contact-input flex flex-column col-6">
                   <label>Name</label>
                   <input type="text" className="name " placeholder="John" />
