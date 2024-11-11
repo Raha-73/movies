@@ -1,3 +1,119 @@
 .loading {
   margin: 200px 0;
 }
+.info {
+  margin-top: 30px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid #222028;
+}
+.title {
+  color: #fff;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 42px;
+  margin-bottom: 25px;
+  padding-top: 25px;
+}
+.info .detail {
+  color: white;
+}
+.info .detail .detail-image {
+  width: 25%;
+  position: relative;
+}
+.info .detail .detail-image img {
+  border-radius: 10px;
+  height: 386px;
+  object-fit: cover;
+}
+.info .detail .detail-image .rate {
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(26, 25, 31, 0.6);
+  border: 2px solid #29b474;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+}
+.info .detail .detail-image .favorite {
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 5px;
+  background-color: rgba(26, 25, 31);
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  cursor: pointer;
+}
+.info .detail .detail-image .favorite:hover {
+  color: #f9ab00;
+}
+.info .detail .information {
+  width: 25%;
+  padding: 0 25px;
+}
+.info .detail .information .info-item {
+  width: 100%;
+  padding: 5px 0;
+}
+.info .detail .information .desc {
+  width: 100%;
+  height: 140px;
+  border-radius: 10px;
+  background-color: #222028;
+  align-self: end;
+  padding: 15px 20px 0;
+  font-size: 16px;
+  line-height: 26px;
+  color: #fff;
+  margin-bottom: 0;
+  overflow-y: auto;
+}
+.desc::-webkit-scrollbar {
+  width: 5px;
+}
+
+.desc::-webkit-scrollbar-track {
+  background: #222028;
+  border-radius: 10px;
+}
+
+.desc::-webkit-scrollbar-thumb {
+  background: #f9ab00;
+  border-radius: 10px;
+}
+.detail .poster {
+  width: 50%;
+}
+.detail .poster img {
+  height: 386px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.more-detail .ant-tabs-nav::before {
+  border-bottom: 1px solid #222028;
+}
+.image-item {
+  width: 33.33%;
+}
+.image-item img {
+  border-radius: 10px;
+}
+.similar-title {
+  color: #fff;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 42px;
+  margin-bottom: 20px;
+}
+
+.orange {
+  color: #f9ab00;
+}
+.gap-6 {
+  gap: 6px;
+}

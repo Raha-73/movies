@@ -85,7 +85,7 @@
   left: 10px;
 }
 
-.card .title {
+.card .singleMovie-title {
   height: 30px;
   margin-top: 10px;
   white-space: nowrap;
@@ -100,7 +100,7 @@
   text-transform: capitalize;
 }
 
-.card .title:hover {
+.card .singleMovie-title:hover {
   color: #f9ab00;
 }
 
