@@ -129,7 +129,7 @@ export default function SingleMovie() {
       label: "PHOTOS",
       children: (
         <div className="flex">
-          <div className="col-7">{renderImages()}</div>
+          <div className="col-7 images-holder">{renderImages()}</div>
           <div className="col-5">
             <h3 className="similar-title">You may also like...</h3>
             <div className="flex">{renderSimilarMovies()}</div>
@@ -239,6 +239,21 @@ export default function SingleMovie() {
                     onChange={onTabChange}
                   />
                 </ConfigProvider>
+              </div>
+            </section>
+            <section>
+              <div className="container flex">
+                <div className="contact-box w-full flex justify-center items-center">
+                  <div className="contact-input flex flex-column col-12">
+                    <label>Message</label>
+                    <textarea
+                      className="message "
+                      placeholder="Type Your Message..."
+                      rows="5"
+                    />
+                  </div>
+                  <button className="send-information">Send</button>
+                </div>
               </div>
             </section>
           </Fragment>
