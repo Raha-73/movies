@@ -68,22 +68,88 @@ export default function HomePage() {
     {
       title: "Basic",
       price: "Free",
+      duration: "",
       color: "#f9ab00",
-      itemList: [""],
+      itemList: [
+        {
+          enable: true,
+          text: "7 days",
+        },
+        {
+          enable: true,
+          text: "720p Resolution",
+        },
+        {
+          enable: false,
+          text: "Limited Availability",
+        },
+        {
+          enable: false,
+          text: "Desktop Only",
+        },
+        {
+          enable: false,
+          text: "Limited Support",
+        },
+      ],
       submit: "Register",
     },
     {
       title: "Premium",
-      price: "$34.99 / month",
+      price: "$34.99",
+      duration: "/ month",
       color: "#f06629",
-      itemList: "",
+      itemList: [
+        {
+          enable: true,
+          text: "1 Month",
+        },
+        {
+          enable: true,
+          text: "Full HD",
+        },
+        {
+          enable: true,
+          text: "Limited Availability",
+        },
+        {
+          enable: false,
+          text: "TV & Desktop",
+        },
+        {
+          enable: false,
+          text: "24/7 Support",
+        },
+      ],
       submit: "Choose Plan",
     },
     {
       title: "Cinematic",
-      price: "$49.99 / month",
+      price: "$49.99",
+      duration: "/ month",
       color: "#eb5757",
-      itemList: "",
+      itemList: [
+        {
+          enable: true,
+          text: "2 Months",
+        },
+        {
+          enable: true,
+          text: "Ultra HD",
+        },
+        {
+          enable: true,
+          text: "Limited Availability",
+        },
+        {
+          enable: true,
+          text: "Any Device",
+        },
+        {
+          enable: true,
+          text: "24/7 Support",
+        },
+      ],
       submit: "Choose Plan",
     },
   ];
@@ -97,6 +163,7 @@ export default function HomePage() {
             itemList={item.itemList}
             color={item.color}
             submit={item.submit}
+            duration={item.duration}
           />
         </div>
       );

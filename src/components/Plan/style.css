@@ -1,5 +1,6 @@
 .plan {
   padding: 20px;
+  height: 100%;
   background-color: #222028;
   border-top: 2px solid;
   border-radius: 8px;
@@ -7,7 +8,48 @@
   position: relative;
   overflow: hidden;
 }
-
+.plan-banner .plan-title {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 400;
+}
+.plan-banner .plan-price {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 100%;
+}
+.plan-banner .plan-price .duration {
+  font-size: 14px;
+  bottom: 1px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+.plan .plan-list {
+  padding-top: 20px;
+}
+.tabler-icon-circle-check {
+  color: #29b474;
+}
+.tabler-icon-circle-minus {
+  color: #c0c0c0;
+}
+.white {
+  color: #fff;
+}
+.gray {
+  color: #c0c0c0;
+}
+.plan .plan-list .plan-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 10px;
+  gap: 10px;
+}
 .submit {
   cursor: pointer;
   height: 46px;
@@ -16,4 +58,7 @@
   font-size: 14px;
   text-transform: uppercase;
   margin-top: 20px;
+}
+.submit:hover {
+  background-color: rgba(240, 102, 41, 0.05);
 }

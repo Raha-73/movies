@@ -26,7 +26,9 @@
 .recently-movie {
   padding: 80px 0 20px 0;
 }
-
+.plan-section {
+  align-content: stretch;
+}
 @media screen and (min-width: 867px) {
   .movie {
     width: 20%;
