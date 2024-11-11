@@ -6,6 +6,12 @@ import axios from "axios";
 import MovieCard from "../../components/MovieCard";
 import "./style.css";
 import Plan from "../../components/Plan";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
+
 export default function HomePage() {
   const [newMovies, setNewMovies] = useState({
     data: [],
@@ -23,18 +29,17 @@ export default function HomePage() {
       });
   }, []);
   function renderList() {
-    const firstFiveNewMovies = newMovies.data.slice(0, 5);
-    return firstFiveNewMovies.map(function (movie, index) {
+    return newMovies.data.map(function (movie, index) {
       return (
         <Fragment>
-          <div className="movie" key={index}>
+          <SwiperSlide>
             <MovieCard
               image={movie.poster}
               title={movie.title}
               genres={movie.genres}
               id={movie.id}
             />
-          </div>
+          </SwiperSlide>
         </Fragment>
       );
     });
@@ -236,7 +241,10 @@ export default function HomePage() {
               OF THIS SEASON
             </h1>
           </div>
-          <div className="test-card container flex">{renderList()}</div>
+          {/* <div className="test-card container flex">{renderList()}</div> */}
+          <Swiper slidesPerView={4.8} spaceBetween={30} className="mySwiper">
+            {renderList()}
+          </Swiper>
           <section className="recently-movie ">
             <h1 className="home-title">Recently updated</h1>
             <ConfigProvider theme={theme}>

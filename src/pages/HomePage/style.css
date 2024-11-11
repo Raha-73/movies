@@ -8,13 +8,14 @@
   margin: 10px 0;
 }
 .home {
-  margin-top: 10%;
+  margin-top: 80px;
 }
 .home-title {
   font-size: 42px;
   color: #ebebeb;
   line-height: 42px;
   margin-bottom: 30px;
+  user-select: none;
 }
 .home-title .bold-title {
   font-size: 42px;
@@ -33,6 +34,9 @@
 }
 .plan-section {
   align-content: stretch;
+}
+.mySwiper {
+  user-select: none;
 }
 @media screen and (min-width: 867px) {
   .movie {
