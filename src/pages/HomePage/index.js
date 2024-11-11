@@ -5,7 +5,7 @@ import { Fragment, useState, useEffect } from "react";
 import axios from "axios";
 import MovieCard from "../../components/MovieCard";
 import "./style.css";
-
+import Plan from "../../components/Plan";
 export default function HomePage() {
   const [newMovies, setNewMovies] = useState({
     data: [],
@@ -64,6 +64,44 @@ export default function HomePage() {
         setLoading(false);
       });
   };
+  const planData = [
+    {
+      title: "Basic",
+      price: "Free",
+      color: "#f9ab00",
+      itemList: [""],
+      submit: "Register",
+    },
+    {
+      title: "Premium",
+      price: "$34.99 / month",
+      color: "#f06629",
+      itemList: "",
+      submit: "Choose Plan",
+    },
+    {
+      title: "Cinematic",
+      price: "$49.99 / month",
+      color: "#eb5757",
+      itemList: "",
+      submit: "Choose Plan",
+    },
+  ];
+  function renderPlan() {
+    return planData.map(function (item) {
+      return (
+        <div className="col-4">
+          <Plan
+            title={item.title}
+            price={item.price}
+            itemList={item.itemList}
+            color={item.color}
+            submit={item.submit}
+          />
+        </div>
+      );
+    });
+  }
 
   function renderRecentlyMovies() {
     if (loading) {
@@ -141,9 +179,13 @@ export default function HomePage() {
               />
             </ConfigProvider>
           </section>
-          {/* <MovieList title="Special Movies:" link="/" api="" /> */}
+          <div className="plan-section flex">{renderPlan()}</div>
         </div>
       </LayoutComp>
     </Fragment>
   );
+}
+
+{
+  /* <MovieList title="Special Movies:" link="/" api="" /> */
 }

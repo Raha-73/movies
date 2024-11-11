@@ -90,7 +90,6 @@ export default function AboutUs() {
             howtitle={item.howtitle}
             howtext={item.howtext}
           />
-          <div></div>
         </div>
       );
     });

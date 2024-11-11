@@ -41,3 +41,48 @@
   margin-right: auto;
   margin-left: 15px;
 }
+.get-intouch .get-text {
+  color: #c0c0c0;
+  font-size: 16px;
+  line-height: 26px;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+.get-intouch {
+  padding: 28px 0;
+}
+.get-intouch .get-tell {
+  display: block;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.4s;
+  transition-property: color, background-color, border-color, opacity;
+}
+.get-intouch .get-tell:hover {
+  color: #f9ab00;
+}
+.get-intouch .get-mail {
+  display: block;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #fff;
+  transition: 0.4s;
+  transition-property: color, background-color, border-color, opacity;
+}
+.get-intouch .get-mail:hover {
+  color: #f9ab00;
+}
+.get-intouch .contact-social {
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  gap: 10px;
+}
+.tabler-icon {
+  width: 25px;
+  height: 25px;
+}

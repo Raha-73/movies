@@ -1,0 +1,19 @@
+.plan {
+  padding: 20px;
+  background-color: #222028;
+  border-top: 2px solid;
+  border-radius: 8px;
+  margin-top: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.submit {
+  cursor: pointer;
+  height: 46px;
+  border-radius: 8px;
+  background-color: transparent;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-top: 20px;
+}

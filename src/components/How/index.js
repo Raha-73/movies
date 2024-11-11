@@ -1,8 +1,7 @@
 import { Fragment } from "react";
-import { Link } from "react-router-dom";
 import "./style.css";
 
-export default function How({ howtitle, howtext, number }) {
+export default function How({ number, howtitle, howtext }) {
   return (
     <Fragment>
       <div className="holder-how flex flex-nowrap">
