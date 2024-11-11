@@ -6,7 +6,7 @@ export default function LayoutComp({ children }) {
   return (
     <Fragment>
       <Header />
-      <div className="pb-160">{children}</div>
+      <div className="pt-100 pb-160">{children}</div>
       <Footer />
     </Fragment>
   );

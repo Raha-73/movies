@@ -32,6 +32,7 @@ export default function HomePage() {
               image={movie.poster}
               title={movie.title}
               genres={movie.genres}
+              id={movie.id}
             />
           </div>
         </Fragment>
@@ -181,6 +182,7 @@ export default function HomePage() {
           image={movie.poster}
           title={movie.title}
           genres={movie.genres}
+          id={movie.id}
         />
       </div>
     ));
@@ -246,6 +248,7 @@ export default function HomePage() {
               />
             </ConfigProvider>
           </section>
+          <h1 className="plan-heading">Select your plan</h1>
           <div className="plan-section flex">{renderPlan()}</div>
         </div>
       </LayoutComp>
