@@ -7,6 +7,7 @@ import "./style.css";
 import { IconBookmark, IconBookmarkFilled } from "@tabler/icons-react";
 import { ConfigProvider, Tabs } from "antd";
 import MovieCard from "../../components/MovieCard";
+import Comment from "../../components/Comment";
 
 export default function SingleMovie() {
   const { id } = useParams();
@@ -95,13 +96,94 @@ export default function SingleMovie() {
 
   function onTabChange(key) {}
 
+  const comments = [
+    {
+      name: "John Doe",
+      date: "30.08.2018, 17:53",
+      content:
+        "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+      likes: "12",
+      dislikes: "7",
+    },
+    {
+      name: "Jane Smith",
+      date: "01.09.2018, 10:15",
+      content: "This article was very helpful. Thanks for sharing!",
+      likes: "25",
+      dislikes: "2",
+    },
+    {
+      name: "Alice Johnson",
+      date: "02.09.2018, 14:27",
+      content: "I disagree with some points, but overall a good read.",
+      likes: "8",
+      dislikes: "5",
+    },
+    {
+      name: "Michael Brown",
+      date: "03.09.2018, 08:43",
+      content: "Lorem Ipsum is simply dummy text of the printing industry.",
+      likes: "10",
+      dislikes: "1",
+    },
+    {
+      name: "Linda Garcia",
+      date: "05.09.2018, 19:35",
+      content: "I found this content somewhat confusing. Could you clarify?",
+      likes: "6",
+      dislikes: "3",
+    },
+    {
+      name: "William Davis",
+      date: "06.09.2018, 11:20",
+      content: "Interesting read! I learned something new today.",
+      likes: "30",
+      dislikes: "0",
+    },
+    {
+      name: "Emily Martinez",
+      date: "07.09.2018, 13:00",
+      content: "I enjoyed the article. Keep up the great work!",
+      likes: "15",
+      dislikes: "4",
+    },
+    {
+      name: "James Wilson",
+      date: "08.09.2018, 16:45",
+      content: "Not sure I agree with everything, but well-written.",
+      likes: "13",
+      dislikes: "6",
+    },
+    {
+      name: "Sophia Anderson",
+      date: "09.09.2018, 12:30",
+      content: "This was very informative. Thank you!",
+      likes: "20",
+      dislikes: "3",
+    },
+    {
+      name: "Robert Thomas",
+      date: "10.09.2018, 15:17",
+      content: "Could use more examples, but overall not bad.",
+      likes: "7",
+      dislikes: "2",
+    },
+    {
+      name: "Olivia Taylor",
+      date: "11.09.2018, 09:05",
+      content: "Great points. I especially liked the examples.",
+      likes: "18",
+      dislikes: "1",
+    },
+  ];
+
   const items = [
     {
       key: "1",
       label: "COMMENTS",
       children: (
-        <div className="flex">
-          <div className="col-7"></div>
+        <div className="flex ">
+          <div className="col-7 comment-holder">{renderComments()}</div>
           <div className="col-5">
             <h3 className="similar-title">You may also like...</h3>
             <div className="flex">{renderSimilarMovies()}</div>
@@ -164,6 +246,20 @@ export default function SingleMovie() {
       );
     });
   }
+
+  function renderComments() {
+    return comments.map(function (comment) {
+      return (
+        <Comment
+          name={comment.name}
+          date={comment.date}
+          content={comment.content}
+          likes={comment.likes}
+          dislikes={comment.dislikes}
+        />
+      );
+    });
+  }
   const theme = {
     token: {
       colorPrimary: "#f9ab00",
@@ -179,7 +275,9 @@ export default function SingleMovie() {
     <Fragment>
       <LayoutComp>
         {loading ? (
-          <h2 className="loading">Loading ... please wait</h2>
+          <div className="container">
+            <h2 className="loading">Loading ... please wait</h2>
+          </div>
         ) : (
           <Fragment>
             <section className="info">
