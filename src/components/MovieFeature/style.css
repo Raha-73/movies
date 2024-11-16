@@ -1,10 +1,19 @@
-.feture-icon {
+.holder-feature {
+  align-items: start;
+}
+.feature-icon {
   color: #f9ab00;
 }
-.tabler-icon {
+.feature-icon .tabler-icon {
   width: 42px;
   height: 42px;
 }
 .description {
   padding-left: 10px;
+}
+.title {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    padding: 0;
 }

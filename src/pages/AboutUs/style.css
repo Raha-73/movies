@@ -4,12 +4,10 @@
 .section-text .bold {
   color: #fff;
 }
-.feture {
-  margin-bottom: 0px;
-}
 .feture-card {
   margin-top: 30px;
   display: flex;
+  gap: 5px;
 }
 .feture-card .title {
   display: flex;

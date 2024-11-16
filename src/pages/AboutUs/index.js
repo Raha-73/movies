@@ -26,22 +26,22 @@ export default function AboutUs() {
     {
       title: "Online TV",
       text: "Expand your entertainment horizons with our Online TV. Stream live TV channels, catch up on your favorite shows, and enjoy a wide range of television content online.",
-      icon: "IconMovie",
+      icon: "IconDeviceTv",
     },
     {
-      title: "Early access to new items",
+      title: "Early access to new ",
       text: "Be the first to experience the latest movies and exclusive content with our Early Access feature. Get a sneak peek into upcoming releases, gain access to special screenings, and stay ahead of the curve.",
-      icon: "IconMovie",
+      icon: "IconTicket",
     },
     {
       title: "Airplay",
       text: "Seamlessly stream movies from your device to the big screen with Airplay integration. Experience the cinematic magic in the comfort of your living room and share the excitement with friends and family.",
-      icon: "IconMovie",
+      icon: "IconCast",
     },
     {
       title: "Multi language subtitles",
       text: "Break language barriers and enjoy movies from around the world with our multi-language subtitles. Explore different cultures, expand your cinematic horizons, and appreciate the beauty of global cinema.",
-      icon: "IconMovie",
+      icon: "IconLanguage",
     },
   ];
 
@@ -69,7 +69,7 @@ export default function AboutUs() {
   function renderFeatures() {
     return featureData.map(function (feature) {
       return (
-        <div className="feture-card flex items-center col-4">
+        <div className="feture-card flex items-center col-4 ">
           <MovieFeature
             title={feature.title}
             text={feature.text}

@@ -50,24 +50,21 @@ export default function Contacts() {
                 <button className="send-information">Send</button>
               </div>
             </div>
-            <div className="get-intouch col-4">
-              <h1 className="get-intouch get-section">Get In Touch</h1>
-              <div className="get-intouch get-text">
+            <div className="get-intouch flex flex-column col-4">
+              <h1 className="get-section">Get In Touch</h1>
+              <div className="get-text">
                 We are always happy to help and provide more information about
                 our services. You can contact us through email, phone, or by
                 filling out the form on our website. Thank you for considering
                 us!
               </div>
-              <a className="get-intouch get-tell" href="tel:+1 800 234 56 78">
+              <a className="get-tell" href="tel:+1 800 234 56 78">
                 +1 800 234 56 78
               </a>
-              <a
-                className="get-intouch get-mail"
-                href="malito:support@hotflix.template"
-              >
+              <a className="get-mail" href="malito:support@hotflix.template">
                 support@hotflix.template
               </a>
-              <div className="get-intouch contact-social flex">
+              <div className="contact-social flex">
                 <a href="#">
                   <IconBrandFacebook stroke={2} />
                 </a>
