@@ -162,7 +162,7 @@ export default function HomePage() {
   function renderPlan() {
     return planData.map(function (item) {
       return (
-        <div className="col-4">
+        <div className="col-12 col-md-6 col-lg-4 my-2">
           <Plan
             title={item.title}
             price={item.price}
@@ -182,7 +182,7 @@ export default function HomePage() {
     }
 
     return movies.map((movie) => (
-      <div className="recent-movie" key={movie.id}>
+      <div className="col-6 col-md-3 col-lg-2 py-2" key={movie.id}>
         <MovieCard
           image={movie.poster}
           title={movie.title}
@@ -244,7 +244,7 @@ export default function HomePage() {
               {renderList(newMovies.data)}
             </Swiper>
           </div>
-          <section className="recently-movie ">
+          <section className="recently-movie">
             <h1 className="home-title">Recently updated</h1>
             <ConfigProvider theme={theme}>
               <Tabs
