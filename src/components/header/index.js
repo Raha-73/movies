@@ -72,31 +72,33 @@ export default function Header() {
               />
             </a>
           </div>
-          <div className="header-links flex">
-            <Link className="header-link" to="/">
-              HOME
-            </Link>
-            <Link className="header-link" to="#">
-              Catalog
-            </Link>
-            <Link className="header-link" to="#">
-              Pricing plan
-            </Link>
-            <Link className="header-link" to="#">
-              Pages
-            </Link>
+          <div className="d-none d-lg-block">
+            <div className="header-links flex ">
+              <Link className="header-link" to="/">
+                HOME
+              </Link>
+              <Link className="header-link" to="#">
+                Catalog
+              </Link>
+              <Link className="header-link" to="#">
+                Pricing plan
+              </Link>
+              <Link className="header-link" to="#">
+                Pages
+              </Link>
 
-            <Dropdown
-              overlayStyle={{ backgroundColor: "#222028" }}
-              className="dropDown"
-              menu={{ items }}
-              trigger={["click"]}
-            >
-              <div style={{ backgroundColor: "#222028" }}>...</div>
-            </Dropdown>
+              <Dropdown
+                overlayStyle={{ backgroundColor: "#222028" }}
+                className="dropDown"
+                menu={{ items }}
+                trigger={["click"]}
+              >
+                <div style={{ backgroundColor: "#222028" }}>...</div>
+              </Dropdown>
+            </div>
           </div>
 
-          <div className="input-search">
+          <div className="input-search d-none d-lg-block">
             <input
               type="text"
               onChange={inputChange}
@@ -113,9 +115,10 @@ export default function Header() {
               </div>
             )}
           </div>
-          <Link className="nickname" to="/profile">
+          <Link className="nickname d-none d-lg-block" to="/profile">
             Nickname
           </Link>
+          <div className="d-block d-lg-none">hamb</div>
         </div>
       </div>
     </Fragment>

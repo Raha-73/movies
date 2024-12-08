@@ -182,7 +182,7 @@ export default function HomePage() {
     }
 
     return movies.map((movie) => (
-      <div className="col-6 col-md-3 col-lg-2 py-2" key={movie.id}>
+      <div className="col-12 col-sm-6 col-md-3 col-lg-2 py-2" key={movie.id}>
         <MovieCard
           image={movie.poster}
           title={movie.title}
@@ -240,7 +240,21 @@ export default function HomePage() {
               <b className="bold-title">NEW ITEMS </b>
               OF THIS SEASON
             </h1>
-            <Swiper slidesPerView={4.8} spaceBetween={30} className="mySwiper">
+            <Swiper
+              spaceBetween={30}
+              breakpoints={{
+                360: {
+                  slidesPerView: 1.5,
+                },
+                768: {
+                  slidesPerView: 3.5,
+                },
+                1024: {
+                  slidesPerView: 4.5,
+                },
+              }}
+              className="mySwiper"
+            >
               {renderList(newMovies.data)}
             </Swiper>
           </div>
@@ -261,8 +275,22 @@ export default function HomePage() {
             <div className="home-scroll">
               <h1 className="home-title">Expected premiere</h1>
               <Swiper
-                slidesPerView={6.2}
+                slidesPerView={1.5}
                 spaceBetween={30}
+                breakpoints={{
+                  360: {
+                    slidesPerView: 1.5,
+                  },
+                  500: {
+                    slidesPerView: 3.5,
+                  },
+                  768: {
+                    slidesPerView: 4.8,
+                  },
+                  1024: {
+                    slidesPerView: 6.3,
+                  },
+                }}
                 className="mySwiper"
               >
                 {renderList(newMovies.data)}
