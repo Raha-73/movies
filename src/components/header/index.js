@@ -2,9 +2,14 @@ import { Link } from "react-router-dom";
 import "./style.css";
 import { Fragment, useState, useEffect } from "react";
 import axios from "axios";
-import { IconSearch } from "@tabler/icons-react";
 import { DownOutlined } from "@ant-design/icons";
 import { Dropdown, Space } from "antd";
+import {
+  IconSearch,
+  IconMenu2,
+  IconUser,
+  IconChevronDown,
+} from "@tabler/icons-react";
 
 export default function Header() {
   const [search, setSearch] = useState("");
@@ -36,6 +41,20 @@ export default function Header() {
       label: <Link to="/aboutUs">About Us</Link>,
     },
   ];
+  const language = [
+    {
+      key: "en",
+      label: <Link to="#">English</Link>,
+    },
+    {
+      key: "sp",
+      label: <Link to="#">Spanish</Link>,
+    },
+    {
+      key: "fr",
+      label: <Link to="#">French</Link>,
+    },
+  ];
 
   function renderList() {
     if (searchResult.data.length < 1) {
@@ -60,19 +79,25 @@ export default function Header() {
     setSearchResultVisibility(value.length > 0);
   }
 
+  function toggleMobileMenu() {
+    const mobileMenu = document.querySelector(".mobile-menu");
+    mobileMenu.classList.toggle("menu-open");
+  }
+
   return (
     <Fragment>
-      <div className="header container-full header-wrapper justify-between flex items-center flex-nowrap">
-        <div className="container justify-between flex items-center flex-nowrap">
-          <div>
-            <a href="/">
-              <img
-                src="https://hotflix.volkovdesign.com/main/img/logo.svg"
-                alt="Logo"
-              />
-            </a>
-          </div>
-          <div className="d-none d-lg-block">
+      <section className="desktop-mode d-none d-lg-block">
+        <div className="header container-full header-wrapper justify-between flex items-center flex-nowrap">
+          <div className="container justify-between flex items-center flex-nowrap">
+            <div>
+              <a href="/">
+                <img
+                  src="https://hotflix.volkovdesign.com/main/img/logo.svg"
+                  alt="Logo"
+                />
+              </a>
+            </div>
+
             <div className="header-links flex ">
               <Link className="header-link" to="/">
                 HOME
@@ -96,31 +121,85 @@ export default function Header() {
                 <div style={{ backgroundColor: "#222028" }}>...</div>
               </Dropdown>
             </div>
-          </div>
 
-          <div className="input-search d-none d-lg-block">
-            <input
-              type="text"
-              onChange={inputChange}
-              className="search"
-              placeholder="Search..."
-              value={search}
-            ></input>{" "}
-            <a href="#" className="search-icon">
-              <IconSearch className="icon" stroke={2} />
-            </a>
-            {searchResultVisibility && (
-              <div className="result-search">
-                <ul className="search-list">{renderList()}</ul>
-              </div>
-            )}
+            <div className="input-search ">
+              <input
+                type="text"
+                onChange={inputChange}
+                className="search"
+                placeholder="Search..."
+                value={search}
+              ></input>{" "}
+              <a href="#" className="search-icon">
+                <IconSearch className="icon" stroke={2} />
+              </a>
+              {searchResultVisibility && (
+                <div className="result-search">
+                  <ul className="search-list">{renderList()}</ul>
+                </div>
+              )}
+            </div>
+            <Link className="nickname " to="/profile">
+              Nickname
+            </Link>
           </div>
-          <Link className="nickname d-none d-lg-block" to="/profile">
-            Nickname
-          </Link>
-          <div className="d-block d-lg-none">hamb</div>
         </div>
-      </div>
+      </section>
+      <section className="mobile-mode d-lg-none">
+        <div className="header container-full header-wrapper justify-between flex items-center flex-nowrap">
+          <div className="mobile-menu ">
+            <ul className="mobile-list">
+              <li className="mobile-list-item flex items-center">
+                HOME
+                <IconChevronDown width="12" height="12" stroke={2} />
+              </li>
+              <li className="mobile-list-item flex items-center">
+                CATALOG
+                <IconChevronDown width="12" height="12" stroke={2} />
+              </li>
+              <li className="mobile-list-item">PRICING PLAN</li>
+              <li className="mobile-list-item flex items-center">
+                PAGES
+                <IconChevronDown width="12" height="12" stroke={2} />
+              </li>
+              <li className="mobile-list-item">...</li>
+            </ul>
+          </div>
+          <div className="container justify-between flex items-center flex-nowrap">
+            <div>
+              <a href="/">
+                <img
+                  src="https://hotflix.volkovdesign.com/main/img/logo.svg"
+                  alt="Logo"
+                />
+              </a>
+            </div>
+            <div className="phone-use flex items-center">
+              <IconSearch className="icon" stroke={2} />
+              <Dropdown
+                overlayStyle={{ backgroundColor: "#222028" }}
+                className="dropDown1"
+                menu={{ items }}
+                trigger={["click"]}
+              >
+                <div
+                  className="language flex items-center "
+                  style={{ backgroundColor: "#222028" }}
+                >
+                  <span>EN</span>{" "}
+                  <IconChevronDown width="12" height="12" stroke={2} />
+                </div>
+              </Dropdown>
+              <div className="user flex items-center justify-center">
+                <IconUser stroke={2} />
+              </div>
+              <div onClick={toggleMobileMenu}>
+                <IconMenu2 stroke={2} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </Fragment>
   );
 }

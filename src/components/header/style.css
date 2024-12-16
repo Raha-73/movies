@@ -126,3 +126,39 @@ input:focus {
 .ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item:hover {
   color: #f9ab00;
 }
+.mobile-mode {
+  position: relative;
+}
+.mobile-mode .mobile-menu {
+  padding: 30px;
+  background-color: #1a191f;
+  width: 85%;
+  overflow: hidden;
+  display: block;
+  height: 100vh;
+  margin-bottom: 20px;
+  position: absolute;
+  right: 0;
+  top: 80px;
+  border-top: 2px solid #f9ab00;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.mobile-mode .mobile-menu.menu-open {
+  opacity: 1;
+}
+.mobile-mode .mobile-menu .mobile-list .mobile-list-item {
+  padding: 15px 0;
+  color: #fff;
+  gap: 3px;
+}
+.phone-use {
+  gap: 10px;
+}
+.phone-use .user {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #f9ab00;
+  border-radius: 10px;
+}
