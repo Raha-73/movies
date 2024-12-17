@@ -13,16 +13,21 @@
   line-height: 16px;
   color: #c0c0c0;
 }
-.footer-links {
-  display: flex;
+.footer-copyright-mobile {
+  font-size: 12px;
+  line-height: 16px;
+  color: #c0c0c0;
+  margin-left: 10px;
 }
+
 .footer-link {
   text-decoration: none;
   color: #fff;
   margin-right: 40px;
   transition: 0.5s;
 }
-.footer-links .scroll-top {
+.footer-links .scroll-top,
+.scroll-top-mobile {
   width: 40px;
   height: 40px;
   border: 2px solid #f9ab00;
@@ -32,7 +37,8 @@
   font-weight: bold;
   text-align: center;
 }
-.footer-links .scroll-top svg {
+.footer-links .scroll-top svg,
+.scroll-top-mobile svg {
   margin: 0 auto;
 }
 .footer-link:hover {
@@ -51,4 +57,18 @@
 .creator-link:hover {
   text-decoration: underline;
   color: #f9ab00;
+}
+.footer {
+  overflow: hidden;
+}
+.mobile-footer {
+  height: 200px;
+}
+.footer-link-mobile {
+  text-decoration: none;
+  font-size: 14px;
+  margin: 20px 0 30px 0;
+  color: #fff;
+  margin-right: 20px;
+  transition: 0.5s;
 }

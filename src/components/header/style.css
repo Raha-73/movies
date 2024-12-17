@@ -134,7 +134,7 @@ input:focus {
   background-color: #1a191f;
   width: 85%;
   overflow: hidden;
-  display: block;
+  display: none;
   height: 100vh;
   margin-bottom: 20px;
   position: absolute;
@@ -147,6 +147,7 @@ input:focus {
 
 .mobile-mode .mobile-menu.menu-open {
   opacity: 1;
+  display: block;
 }
 .mobile-mode .mobile-menu .mobile-list .mobile-list-item {
   padding: 15px 0;

@@ -62,7 +62,7 @@ export default function AboutUs() {
       number: "03",
       howtitle: "Enjoy HotFlix",
       howtext:
-        "Immerse yourself in the world of HotFlix, where unlimited movie streaming awaits. With our vast collection of movies there's something for everyone.",
+        "Immerse yourself in the world of HotFlix, where unlimited movie streaming awaits. With our vast collection of movies there's something for.",
     },
   ];
 
