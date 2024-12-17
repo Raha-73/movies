@@ -183,8 +183,10 @@ export default function SingleMovie() {
       label: "COMMENTS",
       children: (
         <div className="flex ">
-          <div className="col-7 comment-holder">{renderComments()}</div>
-          <div className="col-5">
+          <div className="comment-holder col-12 col-md-7 ">
+            {renderComments()}
+          </div>
+          <div className="col-12 col-md-5">
             <h3 className="similar-title">You may also like...</h3>
             <div className="flex">{renderSimilarMovies()}</div>
           </div>
@@ -197,8 +199,8 @@ export default function SingleMovie() {
       label: "REVIEWS",
       children: (
         <div className="flex">
-          <div className="col-7"></div>
-          <div className="col-5">
+          <div className="col-12 col-md-7 "></div>
+          <div className="col-12 col-md-5">
             <h3 className="similar-title">You may also like...</h3>
             <div className="flex">{renderSimilarMovies()}</div>
           </div>
@@ -211,8 +213,8 @@ export default function SingleMovie() {
       label: "PHOTOS",
       children: (
         <div className="flex">
-          <div className="col-7 images-holder">{renderImages()}</div>
-          <div className="col-5">
+          <div className="images-holder col-12 col-md-7">{renderImages()}</div>
+          <div className="col-12 col-md-5">
             <h3 className="similar-title">You may also like...</h3>
             <div className="flex">{renderSimilarMovies()}</div>
           </div>
@@ -284,7 +286,7 @@ export default function SingleMovie() {
               <div className="container">
                 <h1 className="title">{movie.title}</h1>
                 <div className="detail flex">
-                  <div className="detail-image">
+                  <div className="detail-image col-9 col-md-5 col-lg-3">
                     <img src={movie.poster} className="w-full" />
                     <div className="rate flex items-center justify-center">
                       {movie.imdb_rating}
@@ -293,7 +295,7 @@ export default function SingleMovie() {
                       <IconBookmark stroke={2} />
                     </div>
                   </div>
-                  <div className="information flex">
+                  <div className="information flex col-12 col-md-7 col-lg-3">
                     <div className="info-item flex gap-6">
                       <div>Director : </div>
                       <div className="orange">{movie.director}</div>
@@ -320,7 +322,7 @@ export default function SingleMovie() {
                     </div>
                     <div className="desc">{movie.plot}</div>
                   </div>
-                  <div className="poster">
+                  <div className="poster col-12 col-md-12 col-lg-6">
                     <img src={movie.images[0]} className="w-full" />
                   </div>
                 </div>
@@ -341,7 +343,7 @@ export default function SingleMovie() {
             </section>
             <section>
               <div className="container flex">
-                <div className="contact-box w-full flex justify-center items-center">
+                <div className="contact-box col-12 col-lg-7 flex justify-center items-center">
                   <div className="contact-input flex flex-column col-12">
                     <label>Message</label>
                     <textarea

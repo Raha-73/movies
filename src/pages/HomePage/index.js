@@ -11,7 +11,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
-
+import { Skeleton } from "antd";
 export default function HomePage() {
   const [newMovies, setNewMovies] = useState({
     data: [],
@@ -175,10 +175,21 @@ export default function HomePage() {
       );
     });
   }
+  function renderRecentlyMovieSkeleton() {
+    const skeletons = [];
+    for (let i = 0; i < 12; i++) {
+      skeletons.push(
+        <div className="col-12 col-sm-6 col-md-3 col-lg-2 py-2" key={i}>
+          <Skeleton.Node style={{ width: 200, height: 307 }} />
+        </div>
+      );
+    }
+    return skeletons;
+  }
 
   function renderRecentlyMovies() {
     if (loading) {
-      return <div>Loading...</div>;
+      return <div className="flex">{renderRecentlyMovieSkeleton()}</div>;
     }
 
     return movies.map((movie) => (

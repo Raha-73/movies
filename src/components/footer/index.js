@@ -28,7 +28,7 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <div className="footer-links items-center">
+            <div className="footer-links flex items-center">
               <Link className="footer-link" to="/aboutUs">
                 About Us
               </Link>
