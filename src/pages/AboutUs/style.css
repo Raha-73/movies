@@ -10,8 +10,6 @@
   gap: 5px;
 }
 .feture-card .title {
-  display: flex;
-  align-items: center;
   gap: 10px;
 }
 
@@ -31,9 +29,9 @@
 .how-works {
   padding-top: 80px;
 }
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   .feature-row {
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -41,4 +39,4 @@
   .feature-row {
     grid-template-columns: 1fr;
   }
-} */
+}

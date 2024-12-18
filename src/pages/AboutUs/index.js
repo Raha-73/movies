@@ -69,7 +69,7 @@ export default function AboutUs() {
   function renderFeatures() {
     return featureData.map(function (feature) {
       return (
-        <div className="feture-card flex items-center col-4 ">
+        <div className="feture-card flex col-12 col-md-6 col-lg-4 items-center ">
           <MovieFeature
             title={feature.title}
             text={feature.text}
@@ -84,7 +84,7 @@ export default function AboutUs() {
   function renderHowPart() {
     return howData.map(function (item, index) {
       return (
-        <div className="work-part items-center col-4">
+        <div className="work-part col-12  col-md-6 col-lg-4 items-center">
           <How
             number={item.number}
             howtitle={item.howtitle}
@@ -122,9 +122,7 @@ export default function AboutUs() {
 
             <div className="how-works flex items-center justify-between">
               <h1 className="how-title">How it works?</h1>
-              <div className="flex flex-nowrap items-center ">
-                {renderHowPart()}
-              </div>
+              <div className="flex items-center ">{renderHowPart()}</div>
             </div>
           </div>
         </div>

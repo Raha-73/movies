@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import "./style.css";
 import { Fragment, useState, useEffect } from "react";
 import axios from "axios";
-import { DownOutlined } from "@ant-design/icons";
 import { Dropdown, Space } from "antd";
 import {
   IconSearch,
@@ -150,19 +149,20 @@ export default function Header() {
           <div className="mobile-menu ">
             <ul className="mobile-list">
               <li className="mobile-list-item flex items-center">
-                HOME
-                <IconChevronDown width="12" height="12" stroke={2} />
+                <Link to="/">HOME</Link>
               </li>
               <li className="mobile-list-item flex items-center">
-                CATALOG
-                <IconChevronDown width="12" height="12" stroke={2} />
+                <Link to="/ Contacts">CONTACTS</Link>
               </li>
-              <li className="mobile-list-item">PRICING PLAN</li>
+              <li className="mobile-list-item">
+                <Link to="/aboutus">ABOUTUS</Link>
+              </li>
               <li className="mobile-list-item flex items-center">
-                PAGES
-                <IconChevronDown width="12" height="12" stroke={2} />
+                <Link to="/privacypolicy">PRIVACYPOLICY</Link>
               </li>
-              <li className="mobile-list-item">...</li>
+              <li className="mobile-list-item">
+                <Link to="/Contacts">...</Link>
+              </li>
             </ul>
           </div>
           <div className="container justify-between flex items-center flex-nowrap">
